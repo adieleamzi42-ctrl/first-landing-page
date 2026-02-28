@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./assets/fonts/Roboto-Bold.ttf">
+    <link rel="stylesheet" href="./assets/fonts/Roboto-Regular.ttf">
+    <link rel="shortcut icon" href="./assets/images/favicon-32x32.png" type="image/x-icon">
+</head>
+<body>
+<section class="header">
+    <div class="div">
+        <div style="width: 380px;">
+            <div style="font-size: 60px; font-weight: bold;"> Stay updated! </div>
+            <p style="margin-bottom: 30px;">Join 60,000+ product managers receiving monthly updates on:</p>
+            <ul style="padding-inline-start: 0; display: flex; flex-direction: column; gap: 12px;">
+                <li><img class="stay-updated" src="./assets/images/icon-list.svg" /> Product discovery and building what
+                    matters </li>
+                <li><img class="stay-updated" src="./assets/images/icon-list.svg" /> Measuring to ensure updates are a
+                    success </li>
+                <li><img class="stay-updated" src="./assets/images/icon-list.svg" /> And much more! </li>
+            </ul>
+            <form style="margin-top: 40px;">
+                <div>
+                    <div>
+                        <label for="email-address" style="font-weight: 600; margin-bottom: 8px;">Email address</label>
+                        <div style="" id="error-message">Valid email required</div>
+                    </div>
+                    <input id="email-address" placeholder="Type your email address" />
+                </div>
+                <button class="subscribe-to-monthly-newsletter" id="subscribe-button">Subscribe to my monthly newsletter</button>
+            </form>
+        </div>
+        <img class="sign-up" src="./assets/images/illustration-sign-up-desktop.svg" />
+    </div>
+</section>
+<script>
+    const subscribeButton = document.getElementById('subscribe-button');
+    const errorMessage = document.getElementById('error-message');
+    const emailInput = document.getElementById('email-address');
+
+    subscribeButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        if(!emailInput.value.includes("@") || emailInput.value.split("@")[1].split(".").length != 2) {
+            emailInput.style.backgroundColor = "rgba(255, 0, 0, 0.4)";
+            emailInput.style.border = "2px solid red";
+            errorMessage.style.display = "block";
+            return;
+        }
+        location.assign(`/success.html?email=${emailInput.value}`);
+    });
+</script>
+</body>
+</html>

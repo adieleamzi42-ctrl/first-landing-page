@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+
+        .section-body {
+            text-align: justify;
+        }
+
+        @media (max-width: 426px) {
+            .container {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .image {
+                width: 100%;
+            }
+
+            .section-body {
+                width: 100%;
+            }
+        }
+
+        @media (min-width: 427px) and (max-width: 769px) {
+
+            .container {
+                padding: 20px 110px;
+            }
+
+            .image {
+                width: 100%;
+            }
+        }
+
+        @media(min-width: 770px) {
+            body {
+                margin: 0;
+            }
+
+            .container {
+                /* width: 100%; */
+                display: flex;
+                gap: 40px;
+                padding: 20px 40px;
+            }
+        }
+    </style>
+
+    <div class="container">
+        <img class="image" src="./assets/images/illustration-sign-up-tablet.svg" />
+        <div>
+            <h3 class="header">Lorem lorem lorem</h3>
+            <div class="section-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet nisi ea non perferendis quis, natus ipsa commodi beatae ex quidem deleniti quia soluta praesentium laboriosam deserunt atque, eius dignissimos. Autem!
+            Voluptates alias non nisi expedita repellendus, optio quibusdam adipisci ipsam ut qui nostrum debitis, in beatae recusandae molestiae excepturi ratione quos officiis magni quam error dolorum ullam. Harum, reprehenderit minima.
+            Molestias, animi! Nemo saepe quas incidunt deleniti repudiandae tenetur amet corrupti in inventore, atque expedita porro enim rerum, dolorem minus officiis voluptas quisquam ab? Perspiciatis sed reiciendis rerum amet alias.
+            Praesentium eligendi reprehenderit deleniti explicabo incidunt dolores dicta, neque doloremque possimus nesciunt sunt voluptates illum perspiciatis quos veniam sequi necessitatibus consequuntur fuga numquam qui asperiores quasi velit. Saepe, tenetur tempore!</div>
+        </div>
+    </div>
+
+</body>
+</html>
